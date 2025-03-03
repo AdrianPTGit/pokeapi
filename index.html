@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <title>PokéAPI Fetch</title>
+
+</head>
+
+<body>
+    <div class="buscar_info">
+        <h1>Información del Pokémon</h1>
+        <!-- Campo de entrada para escribir el nombre del Pokémon -->
+        <input type="text" id="pokemonName" placeholder="Ingresa el nombre del Pokémon">
+        <!-- Botón para buscar el Pokémon -->
+        <button onclick="buscarPokemon()">Buscar</button>
+    </div>
+    <div class="info_poquemon">
+        <!-- Elemento donde se mostrará la información del Pokémon -->
+        <p id="pokemonData"></p>
+    </div>
+    <script src="js/buscar_pokemon.js"></script>
+</body>
+
+</html>
