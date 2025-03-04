@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #3d3c3c;
     padding: 20px;
 }
 h1 {
@@ -10,31 +10,32 @@ h1 {
 input {
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #ff4500;
+    border: 3px solid #ffee00;
     border-radius: 5px;
 }
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #ff4500;
-    color: white;
+    background-color: #ffee00;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 button:hover {
-    background-color: #cc3700;
+    background-color: #c7ba00;
 }
 #pokemonData {
     width: 1400px;
     margin-top: 20px;
     margin-left: 50px;
     padding: 15px;
-    background-color: rgb(114, 106, 106);
+    background-color: rgba(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
     text-align: left;
+    border: 3px solid #000
 }
 .buscar_info{
     float: left;
@@ -45,6 +46,18 @@ button:hover {
 }
 
 p{
-    font-size: 2em;
-    color: #fff
+    font-size: 24px;
+    color: #000;
+    margin-left: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+h3{
+    color: rgba(255, 255, 255, 1);
+    background-color: #ff0000;
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px;
+    border-bottom: 5px solid #000;
+    
 }

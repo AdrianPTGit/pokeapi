@@ -1,7 +1,7 @@
-  /**
-             * Función para buscar un Pokémon en la PokeAPI
-             */
-  async function buscarPokemon() {
+/**
+ * Función para buscar un Pokémon en la PokeAPI
+ */
+async function buscarPokemon() {
     // Obtener el valor del input y convertirlo a minúsculas
     let name = document.getElementById("pokemonName").value.toLowerCase();
     let url = `https://pokeapi.co/api/v2/pokemon/${name}`;
@@ -11,13 +11,18 @@
         let response = await fetch(url);
         let data = await response.json();
 
-        // Mostrar la información del Pokémon en el elemento <p>
-        document.getElementById("pokemonData").innerText = `
-            Nombre: ${data.name}
-            Altura: ${data.height}
-            Peso: ${data.weight}
-            Habilidades: ${data.abilities.map(a => a.ability.name).join(", ")}
+        // Obtener la URL de la imagen oficial
+        let imageUrl = data.sprites.other["official-artwork"].front_default;
+
+        // Mostrar la información del Pokémon 
+        document.getElementById("pokemonData").innerHTML = `
+            <h3>Nombre:</h3> <p>${data.name}</p>
+            <h3>Altura:</h3> <p>${data.height}</p>
+            <h3>Peso:</h3> <p>${data.weight}</p>
+            <h3>Habilidades:</h3><p>${data.abilities.map(a => a.ability.name).join(", ")}</p>
+            <h3>Imagen:</h3> <img src="${imageUrl}" alt="${data.name}" style="width:400px; height:auto;">
         `;
+
     } catch (error) {
         // Mostrar un mensaje de error si el Pokémon no es encontrado
         document.getElementById("pokemonData").innerText = "Pokémon no encontrado.";
