@@ -1,0 +1,39 @@
+.info_poquemon{
+    float: left;
+    width: 600px;
+    background-color: rgb(255, 255, 255);
+}
+
+#imagen{
+    float: left;
+    width: 300px;
+    background-color: rgb(172, 172, 172);
+    margin-top: 25px;
+    margin-left: 20px;
+    
+
+}
+
+h3{
+    color: rgba(255, 255, 255, 1);
+    background-color: #ff0000;
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px;
+    border-bottom: 5px solid #000;
+    
+}
+
+img{
+    
+    width: 300px;
+    height: 300px;
+}
+
+p{
+    font-size: 24px;
+    color: #000;
+    margin-left: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+

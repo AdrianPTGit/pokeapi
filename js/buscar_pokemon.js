@@ -20,8 +20,13 @@ async function buscarPokemon() {
             <h3>Altura:</h3> <p>${data.height}</p>
             <h3>Peso:</h3> <p>${data.weight}</p>
             <h3>Habilidades:</h3><p>${data.abilities.map(a => a.ability.name).join(", ")}</p>
-            <h3>Imagen:</h3> <img src="${imageUrl}" alt="${data.name}" style="width:400px; height:auto;">
+            
+            
         `;
+
+        document.getElementById("imagen").innerHTML = `
+            <img src="${imageUrl}" alt="${data.name}" style="width:400px; height:auto;">
+        `
 
     } catch (error) {
         // Mostrar un mensaje de error si el Pokémon no es encontrado
