@@ -76,6 +76,10 @@ h3{
     
     
 }
+
+h3:hover {
+    background-color: #c70000;
+}
 #imagen {
     float: left;
     width: 500px;

@@ -1,7 +1,23 @@
 /**
  * Función para buscar un Pokémon en la PokeAPI
  */
+$(document).ready(function(){
+    // Ocultar el elemento al cargar la página
+    $("#info").hide();
+    $("#imagen").hide();
+
+    // Evento de clic en el botón para mostrarlo
+    $("#btn_buscar").click(function(){
+        $("#info").fadeIn(2000);
+        $("#imagen").fadeIn(2000);
+        buscarPokemon(); // Llamar a la función para buscar el Pokémon
+    });
+});
+
 async function buscarPokemon() {
+
+    
+
     // Obtener el valor del input y convertirlo a minúsculas
     let name = document.getElementById("pokemonName").value.toLowerCase();
     let url = `https://pokeapi.co/api/v2/pokemon/${name}`;
@@ -32,4 +48,7 @@ async function buscarPokemon() {
         // Mostrar un mensaje de error si el Pokémon no es encontrado
         document.getElementById("pokemonData").innerText = "Pokémon no encontrado.";
     }
+
+    
 }
+
